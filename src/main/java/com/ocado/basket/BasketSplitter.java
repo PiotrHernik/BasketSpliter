@@ -44,13 +44,17 @@ public class BasketSplitter {
             CoverBasket minimumSuppliers = new MinimumSupplierFinder(items, suppliersMap);
             List<List<String>> listOfMinSuppliers = minimumSuppliers.split();
 
-            DivisionProducts divisionProducts = new BigestBasket(listOfMinSuppliers, suppliersMap, maxValOfRanking);
+            DivisionProducts divisionProducts = new BigestBasket(listOfMinSuppliers,
+                                                                    suppliersMap,
+                                                                    maxValOfRanking);
             return divisionProducts.split();
 
         }catch (IllegalArgumentException e){
-            throw new IllegalArgumentException("An error occurred while splitting the basket: " + e.getMessage());
+            throw new IllegalArgumentException(
+                    "An error occurred while splitting the basket: " + e.getMessage());
         }catch (IOException e){
-            throw new IOException("An error occurred while splitting the basket: " + e.getMessage());
+            throw new IOException(
+                    "An error occurred while splitting the basket: " + e.getMessage());
         }
 
 
