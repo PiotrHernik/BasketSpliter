@@ -1,5 +1,6 @@
 package com.ocado.basket;
 
+import com.ocado.basket.basketCover.MinimumSupplierFinder;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

@@ -17,7 +17,9 @@
             </goals>
             <configuration>
               <transformers>
-                <transformer />
+                <transformer>
+                  <mainClass>com.ocado.basket.Main</mainClass>
+                </transformer>
               </transformers>
             </configuration>
           </execution>

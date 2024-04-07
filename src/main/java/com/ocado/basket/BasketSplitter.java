@@ -1,6 +1,13 @@
 package com.ocado.basket;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.ocado.basket.basketCover.CoverBasket;
+import com.ocado.basket.basketCover.MinimumSupplierFinder;
+import com.ocado.basket.basketCover.SuppliersMapCreator;
+import com.ocado.basket.productsDivision.BigestBasket;
+import com.ocado.basket.productsDivision.DivisionProducts;
+import com.ocado.basket.readers.IJsonReader;
+import com.ocado.basket.readers.JsonReader;
 
 import java.io.IOException;
 import java.util.*;
