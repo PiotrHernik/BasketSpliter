@@ -12,6 +12,7 @@ public class MinSupplierFinder {
     }
 
     public List<List<String>> minAmountOfSuppliers() {
+        System.out.println("shortest selected subset: " + shortestSelectedSubsets);
         List<List<String>> listOfMinSuppliers = new ArrayList<>();
         for (List<Set<String>> selectedSubsets : shortestSelectedSubsets) {
             List<String> suppliersForSubsets = new ArrayList<>();
@@ -24,7 +25,7 @@ public class MinSupplierFinder {
                 }
             }
             listOfMinSuppliers.add(suppliersForSubsets);
-
+            System.out.println("list of min suppliers: " + listOfMinSuppliers);
 
 
         }
