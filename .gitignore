@@ -1,4 +1,6 @@
 target
+!target/BasketSpliter-1.0-SNAPSHOT.jar
+!target/BasketSpliter-1.0-SNAPSHOT-jar-with-dependencies.jar
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
