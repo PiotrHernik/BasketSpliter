@@ -24,6 +24,7 @@ public class ShortestSetCover {
     private void findSetCoversRecursive(List<Set<String>> subsets, Set<String> universe,
                                         List<Set<String>> selectedSubsets, int subsetCount,
                                         Set<List<Set<String>>> allSelectedSubsets) {
+
         // Sprawdź, czy wszystkie elementy uniwersum zostały już pokryte
         if (universe.isEmpty()) {
             if (selectedSubsets.size() == subsetCount) {
@@ -33,7 +34,6 @@ public class ShortestSetCover {
             }
             return;
         }
-
         // Dla każdego podzbioru, który pokrywa niepokryte elementy uniwersum
         for (Set<String> subset : subsets) {
             // Sprawdź, czy podzbiór pokrywa niepokryte elementy

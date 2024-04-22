@@ -23,25 +23,24 @@ public class BigestBasket implements DivisionProducts {
         int suppliersPosition = 0;
 
         for (int i = 0; i < listOfMinSuppliers.size() - 1; i++) {
-            for (String supplier : listOfMinSuppliers.get(i)) {
-                if (rankingOfSupplier.get(supplier) > maxValue2) {
-                    maxValue2 = rankingOfSupplier.get(supplier);
+            for(int j = 0; j < listOfMinSuppliers.get(i).size(); j++){
+                if(rankingOfSupplier.get(listOfMinSuppliers.get(i).get(j)) > maxValue2){
+                    maxValue2 = rankingOfSupplier.get(listOfMinSuppliers.get(i).get(j));
                     whichList = i;
-                    suppliersPosition++;
+                    suppliersPosition = j;
                 }
-                if (maxValue2 == maxValOfRanking) {
-                    optimalDistribution.put(supplier, suppliersMap.get(supplier));
-                    for (String anotherSupplier : listOfMinSuppliers.get(i)) {
-                        if (!anotherSupplier.equals(supplier)) {
-                            List<String> list = new ArrayList<>(suppliersMap.get(anotherSupplier));
-                            list.removeAll(suppliersMap.get(supplier));
-                            optimalDistribution.put(anotherSupplier, list);
+                if(maxValue2 == maxValOfRanking){
+                    optimalDistribution.put(listOfMinSuppliers.get(i).get(j), suppliersMap.get(listOfMinSuppliers.get(i).get(j)));
+                    for(int k = 0; k < listOfMinSuppliers.get(i).size(); k++){
+                        if(k != j){
+                            List<String> list = new ArrayList<>(suppliersMap.get(listOfMinSuppliers.get(i).get(k)));
+                            list.removeAll(suppliersMap.get(listOfMinSuppliers.get(i).get(j)));
+                            optimalDistribution.put(listOfMinSuppliers.get(i).get(k), list);
                         }
                     }
                     return optimalDistribution;
+
                 }
-
-
             }
         }
         optimalDistribution.put(listOfMinSuppliers.get(whichList).get(suppliersPosition),
