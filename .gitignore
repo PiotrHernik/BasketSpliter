@@ -12,6 +12,7 @@ target
 *.iml
 *.ipr
 .src/main/java/com/ocado/basket/Main.java
+.out
 
 ### Eclipse ###
 .apt_generated
