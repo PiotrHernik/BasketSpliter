@@ -6,6 +6,7 @@ Let's imagine we're running an online supermarket. Over time, we've expanded our
 We want to split the customer's basket into delivery groups. The BasketSpliter library divides the basket optimally to minimize the number of deliveries. Additionally, with the minimal number of suppliers, we create the largest possible delivery groups, as customers tend to prefer purchasing items from the largest delivery group.
 
 
+
 ## Input and Output:
 
 • In its **constructor**, BasketSpliter takes a path to a JSON config file containing a map where the key is the product name and the value is a list of possible delivery methods for that product:
@@ -17,12 +18,15 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 
 	basketSpliter(listOfProducts);
 
-#### Sample output:
+
+
+### Sample output:
 	{
 	"Express Delivery": ["Steak (300g)", "Carrot (1kg)", "Cold Beer (330ml)", "AA Battery (4 Pcs.)"],
 	"Courier": ["Espresso Machine", "Garden Chair"]
 	}
 
+------------
 ------------
 
 ## Running Instructions:
@@ -65,6 +69,7 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 
 That's it. If you havn't a config file you will find an example file in via: src/test/resources.
 
+------------
 ------------
 
 
