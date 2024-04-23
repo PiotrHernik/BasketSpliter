@@ -32,7 +32,7 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 
 • Download the existing .jar file located at:
 
-	*target/BasketSpliter-1.0-SNAPSHOT.jar*
+	target/BasketSpliter-1.0-SNAPSHOT.jar
 • Download the entire repository and in the terminal type: 
 
 	mvn clear package
@@ -42,16 +42,16 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 
 • Or, in the terminal, execute the command:
 
-	mvn install:install-file -Dfile=<path_to_jar> -DgroupId=com.ocado.basket -DartifactId=BasketSpliter - Dversion=1.0.0 -Dpackaging=jar
+	mvn install:install-file `-Dfile=C:\Users\Piotr\IdeaProjects\BasketSpliter\target\BasketSpliter-1.0-SNAPSHOT.jar `-DgroupId=org.basket `-DartifactId=BasketSpliter `-Dversion=1.0-SNAPSHOT `-Dpackaging=jar
 	
   
   In the next step add the dependency to the pom.xml file:
 
 	<dependency>
-	<groupId>com.ocado.basket</groupId>
-	<artifactId>basket_splitter</artifactId>
-	<version>1.0.0</version>
-	</dependency>
+            <groupId>org.basket</groupId>
+            <artifactId>BasketSpliter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 
 ### **If it's a regular Java application, not a Maven project:**
