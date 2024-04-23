@@ -40,9 +40,9 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 
 • In IntelliJ, easily do it via: File -> Project Structure -> Libraries -> (click ‘+’) -> select the path to your .jar file -> OK
 
-• Or, in the terminal, execute the command:
+• Or, in the terminal, execute the command (in InteliJ if you encounter a problem with this command try add '**`**' befor every '-D...')
 
-	mvn install:install-file `-Dfile=C:\Users\Piotr\IdeaProjects\BasketSpliter\target\BasketSpliter-1.0-SNAPSHOT.jar `-DgroupId=org.basket `-DartifactId=BasketSpliter `-Dversion=1.0-SNAPSHOT `-Dpackaging=jar
+	mvn install:install-file -Dfile=C:\Users\Piotr\IdeaProjects\BasketSpliter\target\BasketSpliter-1.0-SNAPSHOT.jar -DgroupId=org.basket -DartifactId=BasketSpliter -Dversion=1.0-SNAPSHOT -Dpackaging=jar
 	
   
   In the next step add the dependency to the pom.xml file:
