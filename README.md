@@ -1,4 +1,5 @@
 # BasketSpliter
+![31048288](https://github.com/PiotrHernik/BasketSpliter/assets/147530998/67641903-4128-451c-a31e-1648d4918579)
 
 Let's imagine we're running an online supermarket. Over time, we've expanded our product range with various items. Currently, not all products can be delivered by our delivery van. We also offer products from external suppliers that require specialized courier services for delivery. Therefore, we sell products that can be delivered by different suppliers, but not necessarily the same ones.
 
