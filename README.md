@@ -68,6 +68,8 @@ That's it. If you havn't a config file you will find an example file in via: src
 
 
 ## The Set Cover Problem:
+![48708680](https://github.com/PiotrHernik/BasketSpliter/assets/147530998/17337e93-ad2d-4852-ae4e-8d3e4a4b162b)
+
 
 At the core of this library lies the Set Cover Problem. We want to cover the entire universe, represented as U = {1,2,3,…,n}, with the minimal number of subsets. This is an *NP-hard problem*, meaning it's a computational problem whose solution is at least as difficult as that of any problem in the entire universe.
 
