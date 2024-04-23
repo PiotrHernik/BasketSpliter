@@ -1,4 +1,8 @@
+<div align="center">
+	
 # BasketSpliter
+
+</div>
 
 
 Let's imagine we're running an online supermarket. Over time, we've expanded our product range with various items. Currently, not all products can be delivered by our delivery van. We also offer products from external suppliers that require specialized courier services for delivery. Therefore, we sell products that can be delivered by different suppliers, but not necessarily the same ones.
@@ -26,7 +30,6 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 	"Courier": ["Espresso Machine", "Garden Chair"]
 	}
 
-------------
 ------------
 
 ## Running Instructions:
@@ -70,21 +73,39 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 That's it. If you havn't a config file you will find an example file in via: src/test/resources.
 
 ------------
-------------
 
-
+<div align="center">
+	
 ## The Set Cover Problem:
+
+</div>
+
 ![48708680](https://github.com/PiotrHernik/BasketSpliter/assets/147530998/17337e93-ad2d-4852-ae4e-8d3e4a4b162b)
 
 
 At the core of this library lies the Set Cover Problem. We want to cover the entire universe, represented as U = {1,2,3,…,n}, with the minimal number of subsets. This is an *NP-hard problem*, meaning it's a computational problem whose solution is at least as difficult as that of any problem in the entire universe.
 
-	U = {1,2,3,4,5,6}
-	S = {{1,2,3,4},{1,3,5},{1,2,3,5},{1,2,3,6},{2,4,6}}
+<div align="center">
+	
+U = {1,2,3,4,5,6}
+
+
+S = {{1,2,3,4},{1,3,5},{1,2,3,5},{1,2,3,6},{2,4,6}}
+
+</div>
+
+
 This set can be covered in several ways:
 
-	 {{1,2,3,5},{2,4,6}}
-	 {{1,3,5},{2,4,6}}
-	 {{1,2,3,4},{1,2,3,5},{1,2,3,6}}
+<div align="center">
+	
+{{1,2,3,5},{2,4,6}}
+
+{{1,3,5},{2,4,6}}
+
+{{1,2,3,4},{1,2,3,5},{1,2,3,6}}
+
+</div>
+
 
 However, we're interested in the first solution since it has only two subsets (suppliers) and compared to the second solution, it contains a larger subset (we can create a larger delivery).
