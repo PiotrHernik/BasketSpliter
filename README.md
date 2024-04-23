@@ -26,6 +26,7 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 
 ## Running Instructions:
 
+
 ### **Download the .jar file:**
 
 • Download the existing .jar file located at:
@@ -36,14 +37,14 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 	mvn clear package
 ### **Integrate with Maven project:**
 
-• In IntelliJ, easily do it via 
+• In IntelliJ, easily do it via: File -> Project Structure -> Libraries -> (click ‘+’) -> select the path to your .jar file -> OK
 
-	File -> Project Structure -> Libraries -> (click ‘+’) -> select the path to your .jar file -> OK
 • Or, in the terminal, execute the command:
 
 	mvn install:install-file -Dfile=<path_to_jar> -DgroupId=com.ocado.basket -DartifactId=BasketSpliter - Dversion=1.0.0 -Dpackaging=jar
 	
-and add the dependency to the pom.xml file:
+  
+  In the next step add the dependency to the pom.xml file:
 
 	<dependency>
 	<groupId>com.ocado.basket</groupId>
@@ -51,16 +52,17 @@ and add the dependency to the pom.xml file:
 	<version>1.0.0</version>
 	</dependency>
 
+
 ### **If it's a regular Java application, not a Maven project:**
 
-• Compile your Java code along with the basket_splitter.jar:
+• Compile your Java code along with the basket_splitter.jar and run it:
 
 	javac -cp <path_to_jar> Your_App.java
-• Run your application:
 
 	java -cp <path_to_jar> Your_App.java
+ 
 
-That's it. To use this library, create a BasketSpliter class, and then use the split(List<String> clientBasket) method, which will return a map with the optimal split.
+That's it. If you havn't a config file you will find an example file in via: src/test/resources.
 
 ------------
 
