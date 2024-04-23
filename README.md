@@ -10,23 +10,11 @@ We want to split the customer's basket into delivery groups. The BasketSpliter l
 • In its **constructor**, BasketSpliter takes a path to a JSON config file containing a map where the key is the product name and the value is a list of possible delivery methods for that product:
 
 	BasketSpliter basketSpliter = new BasketSpliter("path_to_config_file");
-Config file:
-
-	{
-    "Carrots (1kg)": ["Express Delivery", "Click&Collect"],
-    "Cold Beer (330ml)": ["Express Delivery"],
-    "Steak (300g)": ["Express Delivery", "Click&Collect"],
-    "AA Battery (4 Pcs.)": ["Express Delivery", "Courier"],
-    "Espresso Machine": ["Courier", "Click&Collect"],
-    "Garden Chair": ["Courier"]
-    }
 
 
 • The **split(List<String>)** method takes a list of items in the basket as an argument and returns an optimal split in the form of a map, where the key is the supplier and the value is a list of products, e.g.:
 
-	[
-	"Steak (300g)", "Carrots (1kg)", "Soda (24x330ml)", "AA Battery (4 Pcs.)", "Espresso Machine", "Garden Chair"
-	]
+	basketSpliter(listOfProducts);
 
 #### Sample output:
 	{
